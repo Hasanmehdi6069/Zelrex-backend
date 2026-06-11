@@ -6,8 +6,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>Zelrex AI | Enterprise Data Engine</title>
-    
+    <meta name="description" content="AXELR AI: The Intelligence Execution Platform. Unstructured data conversion and automated workflows for enterprise teams.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -363,7 +362,7 @@
 </head>
 <body class="workspace-data">
 
-    <div id="offline-banner">⚠️ Network Disconnected. Zelrex is in standby mode. Data preserved locally.</div>
+    <div id="offline-banner">⚠️ Network Disconnected. Axelr is in standby mode. Data preserved locally.</div>
 
     <div id="auth-wall">
         <div class="auth-card">
@@ -373,7 +372,7 @@
                     <path d="M50 15 L80 32.5 L50 50 L80 67.5 L50 85" stroke="var(--accent-glow)" stroke-width="6" stroke-linejoin="bevel" fill="none"/>
                     <path d="M20 32.5 L50 50 L20 67.5" stroke="#ffffff" stroke-width="3" stroke-linejoin="bevel" opacity="0.5"/>
                 </svg>
-                <span style="font-weight: 900; letter-spacing: 3px; font-family: 'JetBrains Mono', monospace;">ZELREX</span>
+                <span style="font-weight: 900; letter-spacing: 3px; font-family: 'JetBrains Mono', monospace;">AXELR</span>
             </div>
             <p class="auth-sub">Intelligence Execution Platform.<br>Cryptographic ID required to proceed.</p>
             
@@ -404,12 +403,12 @@
         <div class="ws-grid">
             <div class="workspace-card data" onclick="selectWorkspace('data')">
                 <div class="ws-icon">📊</div>
-                <h3 class="ws-title">Zelrex Data</h3>
+                <h3 class="ws-title">Axelr Data</h3>
                 <p class="ws-desc">Transform documents, receipts, and CSVs into structured business intelligence.</p>
             </div>
             <div class="workspace-card design" onclick="selectWorkspace('design')">
                 <div class="ws-icon">🎨</div>
-                <h3 class="ws-title">Zelrex Design</h3>
+                <h3 class="ws-title">Axelr Design</h3>
                 <p class="ws-desc">Convert mockups, wireframes, and screenshots into live React & Tailwind code.</p>
             </div>
         </div>
@@ -433,7 +432,7 @@
                 <div class="modal-title">Custom Instructions</div>
                 <button class="close-modal-btn" onclick="closeModals()">✕</button>
             </div>
-            <p style="color:var(--text-muted); font-size:13px; margin-bottom:5px;">What would you like Zelrex to know about you?</p>
+            <p style="color:var(--text-muted); font-size:13px; margin-bottom:5px;">What would you like Axelr to know about you?</p>
             <textarea class="modal-input" id="instructions-input" placeholder="e.g., I am a software engineer. Only give me the raw code..."></textarea>
             <button class="modal-submit-btn" onclick="saveCustomInstructions()">Save Instructions</button>
         </div>
@@ -525,7 +524,7 @@
                         <path d="M50 15 L80 32.5 L50 50 L80 67.5 L50 85" stroke="currentColor" stroke-width="6" stroke-linejoin="bevel" fill="none"/>
                         <path d="M20 32.5 L50 50 L20 67.5" stroke="#ffffff" stroke-width="3" stroke-linejoin="bevel" opacity="0.5"/>
                     </svg>
-                    <span style="font-weight: 900; letter-spacing: 3px; font-family: 'JetBrains Mono', monospace;" id="sidebar-logo-text">ZELREX</span>
+                    <span style="font-weight: 900; letter-spacing: 3px; font-family: 'JetBrains Mono', monospace;" id="sidebar-logo-text">AXELR</span>
                 </div>
                 <button class="new-chat-btn" onclick="resetToNewChat()">+ New</button>
             </div>
@@ -573,7 +572,7 @@
                         <div class="model-desc">Our smartest model. Endless pipelines.</div>
                     </div>
                     <div class="model-option designer" onclick="openUpgradeModal()" style="border-color: rgba(244,63,94,0.2); background: rgba(244,63,94,0.05);">
-                        <div class="model-title" style="color: var(--accent-glow-designer);">Zelrex Architect <span style="background: rgba(244,63,94,0.1); color: var(--accent-glow-designer);">DESIGNER</span></div>
+                        <div class="model-title" style="color: var(--accent-glow-designer);">Axelr Architect <span style="background: rgba(244,63,94,0.1); color: var(--accent-glow-designer);">DESIGNER</span></div>
                         <div class="model-desc"> 100  UI/UX generations/day & Live Deployment.</div>
                     </div>
                 </div>
@@ -629,16 +628,16 @@
                 </div>
             </div>
             <input type="file" id="omni-file-input" multiple style="display: none;">
-            <div style="color: var(--text-muted); font-size: 11px; margin-top: 8px; text-align: center;">Zelrex can make mistakes. Verify critical matrix outputs.</div>
+            <div style="color: var(--text-muted); font-size: 11px; margin-top: 8px; text-align: center;">Axelr can make mistakes. Verify critical matrix outputs.</div>
         </div>
     </div>
 
     <script>
         const API_BASE_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" 
             ? "http://localhost:5000" 
-            : "https://your-deployed-backend-api.com"; 
+            : "https://zelrex-backend.onrender.com"; 
 
-        const ZELREX_AVATAR_SVG = `<svg viewBox="0 0 100 100" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 15 L20 32.5 L20 67.5 L50 85" stroke="#ffffff" stroke-width="6" stroke-linejoin="bevel" fill="rgba(255,255,255,0.05)"/><path d="M50 15 L80 32.5 L50 50 L80 67.5 L50 85" stroke="currentColor" stroke-width="6" stroke-linejoin="bevel" fill="none"/><path d="M20 32.5 L50 50 L20 67.5" stroke="#ffffff" stroke-width="3" stroke-linejoin="bevel" opacity="0.5"/></svg>`;
+        const AXELR_AVATAR_SVG = `<svg viewBox="0 0 100 100" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 15 L20 32.5 L20 67.5 L50 85" stroke="#ffffff" stroke-width="6" stroke-linejoin="bevel" fill="rgba(255,255,255,0.05)"/><path d="M50 15 L80 32.5 L50 50 L80 67.5 L50 85" stroke="currentColor" stroke-width="6" stroke-linejoin="bevel" fill="none"/><path d="M20 32.5 L50 50 L20 67.5" stroke="#ffffff" stroke-width="3" stroke-linejoin="bevel" opacity="0.5"/></svg>`;
         const COPY_ICON = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>`;
         const RETRY_ICON = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>`;
         const EDIT_ICON = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>`;
@@ -675,7 +674,7 @@
             promptInput.style.height = 'auto'; 
             promptInput.style.height = promptInput.scrollHeight + 'px'; 
             validateSendCommand(); 
-            localStorage.setItem('zelrex_draft_prompt', promptInput.value); 
+            localStorage.setItem('Axelr_draft_prompt', promptInput.value); 
         });
 
         window.addEventListener('offline', () => {
@@ -813,7 +812,7 @@
                 promptInput.style.height = promptInput.scrollHeight + 'px';
                 
                 validateSendCommand();
-                localStorage.setItem('zelrex_draft_prompt', promptInput.value);
+                localStorage.setItem('Axelr_draft_prompt', promptInput.value);
             };
         } else { 
             micBtn.style.display = 'none'; 
@@ -870,7 +869,7 @@
             const authWallEl = document.getElementById('auth-wall');
             if (authWallEl) authWallEl.style.display = 'none'; 
             
-            const savedWorkspace = localStorage.getItem('zelrex_workspace');
+            const savedWorkspace = localStorage.getItem('Axelr_workspace');
             if (savedWorkspace) {
                 activateWorkspace(savedWorkspace, true);
             } else {
@@ -948,7 +947,7 @@
         }
         
         function selectWorkspace(type) {
-            localStorage.setItem('zelrex_workspace', type);
+            localStorage.setItem('Axelr_workspace', type);
             document.getElementById('workspace-selector').style.display = 'none';
             activateWorkspace(type);
         }
@@ -959,14 +958,13 @@
             
             document.body.classList.remove('workspace-data', 'workspace-design');
             document.body.classList.add(`workspace-${type}`);
-            
             if (type === 'design') {
-                document.getElementById('sidebar-logo-text').innerText = 'ZELREX DESIGN';
+                document.getElementById('sidebar-logo-text').innerText = 'AXELR DESIGN';
                 document.getElementById('hero-title-text').innerText = 'What are we designing today?';
                 document.getElementById('hero-sub-text').innerText = 'AI-powered UI/UX generation & live deployment.';
                 document.getElementById('prompt-input').placeholder = "Upload a mockup or request a UI component...";
             } else {
-                document.getElementById('sidebar-logo-text').innerText = 'ZELREX DATA';
+                document.getElementById('sidebar-logo-text').innerText = 'AXELR DATA';
                 document.getElementById('hero-title-text').innerText = 'What are we building today?';
                 document.getElementById('hero-sub-text').innerText = 'AI-powered architecture and data execution.';
                 document.getElementById('prompt-input').placeholder = "Upload a receipt, invoice, or CSV for extraction...";
@@ -979,7 +977,7 @@
 
         function resetToNewChat(isBoot = false) {
             activeSessionId = null; runningStructuredCache = null; stagedFiles = []; renderFileChips(); 
-            localStorage.removeItem('zelrex_active_session'); 
+            localStorage.removeItem('Axelr_active_session'); 
             document.querySelectorAll('.chat-bubble').forEach(bubble => bubble.remove());
             
             const hero = document.getElementById('hero-display');
@@ -990,9 +988,9 @@
             if (!isBoot) {
                 promptInput.value = ''; 
                 promptInput.style.height = 'auto'; 
-                localStorage.removeItem('zelrex_draft_prompt'); 
+                localStorage.removeItem('Axelr_draft_prompt'); 
             } else {
-                const savedDraft = localStorage.getItem('zelrex_draft_prompt');
+                const savedDraft = localStorage.getItem('Axelr_draft_prompt');
                 if (savedDraft) {
                     promptInput.value = savedDraft;
                     setTimeout(() => {
@@ -1058,7 +1056,7 @@
 
         async function loadArchiveLogs() {
             try {
-                const currentWorkspace = localStorage.getItem('zelrex_workspace') || 'data';
+                const currentWorkspace = localStorage.getItem('axelr_workspace') || 'data';
                 const response = await fetch(`${API_BASE_URL}/api/history?status=${currentTab}&workspace=${currentWorkspace}`, { headers: { 'Authorization': `Bearer ${googleAuthUserToken}` } });
                 if (response.status === 401) return executeGlobalLogout();
                 cachedLogHistory = (await response.json()).logs; 
@@ -1084,11 +1082,11 @@
                 
                 if (isInitialAppLoad) {
                     isInitialAppLoad = false;
-                    const savedSession = localStorage.getItem('zelrex_active_session');
+                    const savedSession = localStorage.getItem('axelr_active_session');
                     if (savedSession && cachedLogHistory.some(l => l._id === savedSession)) {
                         viewPastLogById(savedSession);
                     }
-                    const savedDraft = localStorage.getItem('zelrex_draft_prompt');
+                    const savedDraft = localStorage.getItem('axelr_draft_prompt');
                     if (savedDraft) {
                         promptInput.value = savedDraft;
                         promptInput.style.height = 'auto'; 
@@ -1144,7 +1142,7 @@
                     promptInput.style.height = 'auto'; 
                     promptInput.style.height = promptInput.scrollHeight + 'px';
                     validateSendCommand();
-                    localStorage.setItem('zelrex_draft_prompt', promptInput.value);
+                    localStorage.setItem('axelr_draft_prompt', promptInput.value);
                 }
             } catch(e) { 
                 alert("⚠️ Prompt Enhancer timeout. Payload too large or network dropped.");
@@ -1176,7 +1174,7 @@
         async function shareChat(logId, e) {
             e.stopPropagation(); document.querySelectorAll('.actions-dropdown-list').forEach(d => d.classList.remove('active'));
             const log = cachedLogHistory.find(l => l._id === logId); if (!log) return;
-            let shareText = `Zelrex Intel Report: ${log.filename}\n\n`;
+            let shareText = `Axelr Intel Report: ${log.filename}\n\n`;
             log.messages.forEach(m => { shareText += `[${m.role.toUpperCase()}]: ${m.text}\n\n`; });
             
             if (navigator.clipboard && window.isSecureContext) {
@@ -1203,85 +1201,84 @@
             try { const resp = await fetch(`${API_BASE_URL}/api/history/${logId}`, { method: 'DELETE', headers: { 'Authorization': `Bearer ${googleAuthUserToken}` } }); if (resp.ok) { if (activeSessionId === logId) resetToNewChat(); loadArchiveLogs(); } } catch (e) {}
         }
 function viewPastLogById(logId) {
-            const log = cachedLogHistory.find(l => l._id === logId); if (!log) return;
-            
-            document.getElementById('hero-display').style.display = 'none';
-            document.querySelectorAll('.chat-bubble').forEach(b => b.remove());
-            
-            activeSessionId = logId; 
-            localStorage.setItem('zelrex_active_session', activeSessionId); 
-            
-            runningFileTitle = log.filename; runningStructuredCache = log.structuredData;
-            
-            if (currentTab === 'trashed') {
-                const trashMsg = document.createElement('div'); trashMsg.className = 'chat-bubble';
-                trashMsg.style.cssText = "background: rgba(239,68,68,0.1); color: #ef4444; padding: 15px; text-align: center; border-radius: 8px; margin-bottom: 20px; width: 100%;";
-                trashMsg.innerHTML = `🗑️ This chat is in the trash. Restore it to continue chatting.`; viewport.appendChild(trashMsg);
+    const log = cachedLogHistory.find(l => l._id === logId); if (!log) return;
+    
+    document.getElementById('hero-display').style.display = 'none';
+    document.querySelectorAll('.chat-bubble').forEach(b => b.remove());
+    
+    activeSessionId = logId; 
+    localStorage.setItem('axelr_active_session', activeSessionId); 
+    
+    runningFileTitle = log.filename; runningStructuredCache = log.structuredData;
+    
+    if (currentTab === 'trashed') {
+        const trashMsg = document.createElement('div'); trashMsg.className = 'chat-bubble';
+        trashMsg.style.cssText = "background: rgba(239,68,68,0.1); color: #ef4444; padding: 15px; text-align: center; border-radius: 8px; margin-bottom: 20px; width: 100%;";
+        trashMsg.innerHTML = `🗑️ This chat is in the trash. Restore it to continue chatting.`; viewport.appendChild(trashMsg);
+    }
+
+    log.messages.forEach(msg => {
+        const bubble = document.createElement('div'); bubble.className = `chat-bubble ${msg.role === 'user' ? 'user-bubble' : 'nexus-bubble'}`;
+        
+        if (msg.role === 'user') {
+            let filesHtml = '';
+            if (msg.attachedFiles && msg.attachedFiles.length > 0) {
+                filesHtml = '<div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px;">' + msg.attachedFiles.map(f => `<div class="file-chip">📄 ${escapeHtmlEntities(f)}</div>`).join('') + '</div>';
+            }
+            bubble.innerHTML = `<div class="bubble-content" style="flex:1;">${filesHtml}${DOMPurify.sanitize(marked.parse(msg.text || ""))}</div>`;
+            injectActionButtons(bubble.querySelector('.bubble-content'), msg.text, true);
+        } else { 
+            let rawResponse = msg.text || "";
+            const thinkMatch = rawResponse.match(/<think>([\s\S]*?)<\/think>/i);
+            let thinkingHtml = '';
+            if (thinkMatch) {
+                thinkingHtml = `<details class="think-block"><summary>🧠 View AI Reasoning Process</summary><div class="think-content">${DOMPurify.sanitize(marked.parse(thinkMatch[1].trim()))}</div></details>`;
+                rawResponse = rawResponse.replace(/<think>[\s\S]*?<\/think>/i, '').trim();
             }
 
-            log.messages.forEach(msg => {
-                const bubble = document.createElement('div'); bubble.className = `chat-bubble ${msg.role === 'user' ? 'user-bubble' : 'nexus-bubble'}`;
+            if (rawResponse.trim() === "") {
+                rawResponse = "Intelligence matrix execution complete.";
+            }
+
+            bubble.innerHTML = `<div class="ai-avatar-bubble">${AXELR_AVATAR_SVG}</div><div class="bubble-content" style="flex:1;">${thinkingHtml}${DOMPurify.sanitize(marked.parse(rawResponse))}</div>`;
+            appendPayloadDownload(bubble.querySelector('.bubble-content'));
+            
+            const rawCode = extractHtmlCode(rawResponse);
+            if (rawCode) {
+                const iframe = document.createElement('iframe'); iframe.style.width = '100%'; iframe.style.height = '400px'; iframe.style.border = '1px solid var(--border-muted)'; iframe.style.borderRadius = '8px'; iframe.style.marginTop = '15px'; iframe.style.backgroundColor = '#ffffff';
+                bubble.querySelector('.bubble-content').appendChild(iframe);
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                iframeDoc.open(); iframeDoc.write(rawCode); iframeDoc.close();
+                injectDeployButton(bubble.querySelector('.bubble-content'), rawCode);
+            }
+            injectActionButtons(bubble.querySelector('.bubble-content'), msg.text, false);
+
+            if (msg.variants && msg.variants.length > 1) {
+                const currentIdx = msg.activeVariant || 0;
+                const variantBar = document.createElement('div');
+                variantBar.style.cssText = "display:flex; align-items:center; gap:12px; margin-top:15px; padding-top:10px; border-top:1px solid var(--border-muted); font-size:12px; color:var(--text-muted); font-weight:600;";
                 
-                if (msg.role === 'user') {
-                    let filesHtml = '';
-                    if (msg.attachedFiles && msg.attachedFiles.length > 0) {
-                        filesHtml = '<div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px;">' + msg.attachedFiles.map(f => `<div class="file-chip">📄 ${escapeHtmlEntities(f)}</div>`).join('') + '</div>';
-                    }
-                    bubble.innerHTML = `<div class="bubble-content" style="flex:1;">${filesHtml}${DOMPurify.sanitize(marked.parse(msg.text || ""))}</div>`;
-                    injectActionButtons(bubble.querySelector('.bubble-content'), msg.text, true);
-                } else { 
-                    let rawResponse = msg.text || "";
-                    const thinkMatch = rawResponse.match(/<think>([\s\S]*?)<\/think>/i);
-                    let thinkingHtml = '';
-                    if (thinkMatch) {
-                        thinkingHtml = `<details class="think-block"><summary>🧠 View AI Reasoning Process</summary><div class="think-content">${DOMPurify.sanitize(marked.parse(thinkMatch[1].trim()))}</div></details>`;
-                        rawResponse = rawResponse.replace(/<think>[\s\S]*?<\/think>/i, '').trim();
-                    }
-
-                    if (rawResponse.trim() === "") {
-                        rawResponse = "Intelligence matrix execution complete.";
-                    }
-
-                    bubble.innerHTML = `<div class="ai-avatar-bubble">${ZELREX_AVATAR_SVG}</div><div class="bubble-content" style="flex:1;">${thinkingHtml}${DOMPurify.sanitize(marked.parse(rawResponse))}</div>`;
-                    appendPayloadDownload(bubble.querySelector('.bubble-content'));
-                    
-                    const rawCode = extractHtmlCode(rawResponse);
-                    if (rawCode) {
-                        const iframe = document.createElement('iframe'); iframe.style.width = '100%'; iframe.style.height = '400px'; iframe.style.border = '1px solid var(--border-muted)'; iframe.style.borderRadius = '8px'; iframe.style.marginTop = '15px'; iframe.style.backgroundColor = '#ffffff';
-                        bubble.querySelector('.bubble-content').appendChild(iframe);
-                        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-                        iframeDoc.open(); iframeDoc.write(rawCode); iframeDoc.close();
-                        injectDeployButton(bubble.querySelector('.bubble-content'), rawCode);
-                    }
-                    injectActionButtons(bubble.querySelector('.bubble-content'), msg.text, false);
-// 🟢 FIX: This block must be INSIDE log.messages.forEach 
-                    // and INSIDE the 'else' (model response) block.
-                    if (msg.variants && msg.variants.length > 1) {
-                        const currentIdx = msg.activeVariant || 0;
-                        const variantBar = document.createElement('div');
-                        variantBar.style.cssText = "display:flex; align-items:center; gap:12px; margin-top:15px; padding-top:10px; border-top:1px solid var(--border-muted); font-size:12px; color:var(--text-muted); font-weight:600;";
-                        
-                        const prevBtn = document.createElement('button');
-                        prevBtn.innerHTML = '◀';
-                        prevBtn.style.cssText = `background:transparent; border:none; cursor:${currentIdx === 0 ? 'default' : 'pointer'}; color:${currentIdx === 0 ? 'var(--border-muted)' : 'var(--text-main)'}; font-size:14px;`;
-                        if (currentIdx > 0) prevBtn.onclick = () => switchVariant(logId, msg._id, currentIdx - 1);
-                        
-                        const nextBtn = document.createElement('button');
-                        nextBtn.innerHTML = '▶';
-                        nextBtn.style.cssText = `background:transparent; border:none; cursor:${currentIdx === msg.variants.length - 1 ? 'default' : 'pointer'}; color:${currentIdx === msg.variants.length - 1 ? 'var(--border-muted)' : 'var(--text-main)'}; font-size:14px;`;
-                        if (currentIdx < msg.variants.length - 1) nextBtn.onclick = () => switchVariant(logId, msg._id, currentIdx + 1);
-                        
-                        variantBar.appendChild(prevBtn);
-                        variantBar.appendChild(document.createElement('span')).innerText = `${currentIdx + 1} / ${msg.variants.length}`;
-                        variantBar.appendChild(nextBtn);
-                        
-                        bubble.querySelector('.bubble-content').appendChild(variantBar);
-                    }
-                }
-                viewport.appendChild(bubble);
-            });
-            setTimeout(() => viewport.scrollTop = viewport.scrollHeight, 50);
-            if (window.innerWidth <= 768) sidebarNode.classList.remove('open');
+                const prevBtn = document.createElement('button');
+                prevBtn.innerHTML = '◀';
+                prevBtn.style.cssText = `background:transparent; border:none; cursor:${currentIdx === 0 ? 'default' : 'pointer'}; color:${currentIdx === 0 ? 'var(--border-muted)' : 'var(--text-main)'}; font-size:14px;`;
+                if (currentIdx > 0) prevBtn.onclick = () => switchVariant(logId, msg._id, currentIdx - 1);
+                
+                const nextBtn = document.createElement('button');
+                nextBtn.innerHTML = '▶';
+                nextBtn.style.cssText = `background:transparent; border:none; cursor:${currentIdx === msg.variants.length - 1 ? 'default' : 'pointer'}; color:${currentIdx === msg.variants.length - 1 ? 'var(--border-muted)' : 'var(--text-main)'}; font-size:14px;`;
+                if (currentIdx < msg.variants.length - 1) nextBtn.onclick = () => switchVariant(logId, msg._id, currentIdx + 1);
+                
+                variantBar.appendChild(prevBtn);
+                variantBar.appendChild(document.createElement('span')).innerText = `${currentIdx + 1} / ${msg.variants.length}`;
+                variantBar.appendChild(nextBtn);
+                
+                bubble.querySelector('.bubble-content').appendChild(variantBar);
+            }
+        }
+        viewport.appendChild(bubble);
+    });
+    setTimeout(() => viewport.scrollTop = viewport.scrollHeight, 50);
+    if (window.innerWidth <= 768) sidebarNode.classList.remove('open');
             // ... existing code ...
                     injectActionButtons(bubble.querySelector('.bubble-content'), msg.text, false);
                     
@@ -1375,7 +1372,7 @@ async function switchVariant(logId, msgId, newIndex) {
             setTimeout(() => viewport.scrollTop = viewport.scrollHeight, 50);
 
             const nexusBubble = document.createElement('div'); nexusBubble.className = 'chat-bubble nexus-bubble';
-            nexusBubble.innerHTML = `<div class="ai-avatar-bubble">${ZELREX_AVATAR_SVG}</div><div class="bubble-content" style="flex:1;"><span id="flow-state" style="color:var(--text-muted);">Initializing pipeline...</span></div>`;
+            nexusBubble.innerHTML = `<div class="ai-avatar-bubble">${AXELR_AVATAR_SVG}</div><div class="bubble-content" style="flex:1;"><span id="flow-state" style="color:var(--text-muted);">Initializing pipeline...</span></div>`;
             viewport.appendChild(nexusBubble);
             viewport.scrollTop = viewport.scrollHeight;
 
@@ -1390,7 +1387,7 @@ async function switchVariant(logId, msgId, newIndex) {
             const formData = new FormData();
             formData.append('command', command);
             if (activeSessionId) { formData.append('sessionId', activeSessionId); }
-            formData.append('workspace', localStorage.getItem('zelrex_workspace') || 'data');
+            formData.append('workspace', localStorage.getItem('axelr_workspace') || 'data');
             
             // 🟢 Backend verification flag
             if (isRetry) formData.append('isRetry', 'true');
@@ -1440,8 +1437,8 @@ async function switchVariant(logId, msgId, newIndex) {
                                     const isBrandNewChat = !activeSessionId;
                                     activeSessionId = data.sessionId;
 
-                                    localStorage.setItem('zelrex_active_session', activeSessionId);
-                                    localStorage.removeItem('zelrex_draft_prompt');
+                                    localStorage.setItem('axelr_active_session', activeSessionId);
+                                    localStorage.removeItem('axelr_draft_prompt');
 
                                     runningStructuredCache = data.structuredData;
                                     runningFileTitle = data.filename;
